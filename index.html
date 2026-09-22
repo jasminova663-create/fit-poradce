@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Poradce - Odborný asistent pro zdravou výživu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .cta-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+        .cta-text {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            color: #333;
+            text-align: left;
+        }
+        .info-box h4 {
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+        .info-box p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .stat {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+        }
+        .ad-space {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 30px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏃 Fit Poradce</h1>
+            <p class="tagline">Váš osobní asistent pro zdravou výživu a správné kalorijní cíle</p>
+        </header>
+
+        <div class="features">
+            <div class="feature">
+                <h3>📊 Odhad Kalorií</h3>
+                <p>Jednoduše popište co jste snědli a my Vám řekneme, kolik kalorií jste zkonzumovali. Přesný odhad založený na aktuálních nutričních datech.</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Personalizovaný Plán</h3>
+                <p>Dostanete doporučení na zbytek dne i konkrétní návrhy jídelníčku přizpůsobené vašemu kalorrickému cíli a zdravotním potřebám.</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Jednoduché Použití</h3>
+                <p>Bez komplikovaných tabulek a odborného průmyslu. Stačí napsat, co jste snědli, a dostanetse okamžitou zpětnou vazbu.</p>
+            </div>
+        </div>
+
+        <div class="ad-space">
+            📢 Místo pro reklamy [Prosím kontaktujte nás na fitporadce@example.com]
+        </div>
+
+        <div class="cta-section">
+            <p class="cta-text">Začněte s Fit Poradcem ještě dnes!</p>
+            <p style="margin-bottom: 25px; font-size: 0.9em;">Aplikace je dostupná přes Claude Code</p>
+            <a href="#" class="cta-button">Spustit aplikaci</a>
+        </div>
+
+        <div class="info-box">
+            <h4>👤 Příklad: Modelový uživatel</h4>
+            <p><strong>Profil:</strong> Muž, 50 let, 190 cm, 105 kg, sedavé zaměstnání</p>
+            <p><strong>Doporučené denní kalorijní příjmění:</strong> ~2 900 kcal</p>
+            <p>Na základě věku, váhy, výšky a typu zaměstnání se Fit Poradce přizpůsobuje vašim specifickým potřebám a cílům.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">500+</div>
+                <div class="stat-label">Sledovaných potravin</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Přesný odhad</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Dostupná podpora</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fit Poradce. Všechna práva vyhrazena. | Zdravá výživa pro lepší život</p>
+    </footer>
+</body>
+</html>
